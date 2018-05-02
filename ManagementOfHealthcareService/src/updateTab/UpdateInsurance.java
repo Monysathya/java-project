@@ -755,14 +755,8 @@ public class UpdateInsurance extends javax.swing.JDialog {
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        int i = tbInsurance.getSelectedRow();
-        model = (DefaultTableModel) tbInsurance.getModel();
  
-        if (JOptionPane.showConfirmDialog(null, "Are you sure to cancel?", "Confirm Action", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){   
-            txtID.setText(model.getValueAt(i, 0).toString());
-            txtName.setText(model.getValueAt(i, 1).toString());
-            txtAddress.setText(model.getValueAt(i, 2).toString());
-            
+        if (JOptionPane.showConfirmDialog(null, "Are you sure to cancel?", "Confirm Action", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){              
             formLoad();
             btnAdd.setEnabled(true);
         }
